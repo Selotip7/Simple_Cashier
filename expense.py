@@ -26,9 +26,16 @@ def total_out(expenses):
 
 
 def print_expense(expense):
-    for exp in expense:
-           print(f"{exp['Name']:10} | {exp['Amount']:3} x {exp['price_stat']:6} = {exp['price']:8}")
+    print("\nDaftar Pengeluaran:")
+    print("=" * 40)
+    print(f"{'Nama':10} | {'Qty':3} x {'Harga':6} = {'Total':8}")
+    print("-" * 40)
 
+    for exp in expense:
+        print(f"{exp['Name']:10} | {exp['Amount']:3} x {exp['price_stat']:6} = {exp['price']:8}")
+
+    print("=" * 40)
+    print(f"{'TOTAL':10} | {'':3}   {'':6} = {total_out(expense):8}")
 
 def main():
     expense=[]
